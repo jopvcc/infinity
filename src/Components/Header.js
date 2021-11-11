@@ -1,19 +1,15 @@
 import React from "react";
-import { Navbar, Container, Nav, NavDropdown } from "react-bootstrap";
-
+import { Navbar, Container, Nav } from "react-bootstrap";
 import {
   Box,
   Avatar,
   Menu,
   MenuItem,
   ListItemIcon,
-  Divider,
   IconButton,
-  Typography,
   Tooltip,
 } from "@mui/material";
-
-import { PersonAdd, Settings, Logout } from "@mui/icons-material";
+import { Logout } from "@mui/icons-material";
 
 export default function Header() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -46,7 +42,7 @@ export default function Header() {
                   textAlign: "center",
                 }}
               >
-                <Tooltip title="Account settings">
+                <Tooltip title="Cuenta">
                   <IconButton onClick={handleClick} size="small" sx={{ ml: 2 }}>
                     <Avatar sx={{ width: 32, height: 32 }}>J</Avatar>
                   </IconButton>
@@ -87,35 +83,44 @@ export default function Header() {
                 anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
               >
                 <MenuItem>
-                  <Avatar /> Profile
-                </MenuItem>
-                <MenuItem>
-                  <Avatar /> My account
-                </MenuItem>
-                <Divider />
-                <MenuItem>
-                  <ListItemIcon>
-                    <PersonAdd fontSize="small" />
-                  </ListItemIcon>
-                  Add another account
-                </MenuItem>
-                <MenuItem>
-                  <ListItemIcon>
-                    <Settings fontSize="small" />
-                  </ListItemIcon>
-                  Settings
+                  <Avatar /> Perfil
                 </MenuItem>
                 <MenuItem>
                   <ListItemIcon>
                     <Logout fontSize="small" />
                   </ListItemIcon>
-                  Logout
+                  Salir
                 </MenuItem>
               </Menu>
             </React.Fragment>
           </Navbar.Collapse>
         </Container>
       </Navbar>
+      <div>
+        <video
+          id="background-video"
+          autoplay
+          loop
+          muted
+          poster="/public/assets/images/river.jpg"
+        >
+          <source src="/public/assets/images/river.mp4" type="video/mp4" />
+        </video>
+
+        <video
+          className="video-container video-container-overlay"
+          autoPlay=""
+          loop=""
+          muted=""
+          data-reactid=".0.1.0.0"
+        >
+          <source
+            type="video/mp4"
+            data-reactid=".0.1.0.0.0"
+            src="mov_bbb.mp4"
+          />
+        </video>
+      </div>
     </div>
   );
 }

@@ -11,6 +11,9 @@ import {
 } from "@mui/material";
 import { Logout } from "@mui/icons-material";
 
+import poster_img from "../assets/images/river.jpg";
+import poster_mov from "../assets/images/river.mp4";
+
 export default function Header() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -96,30 +99,18 @@ export default function Header() {
           </Navbar.Collapse>
         </Container>
       </Navbar>
-      <div>
+      <div className="banner-header">
         <video
           id="background-video"
-          autoplay
+          autoplay="true"
           loop
           muted
-          poster="/public/assets/images/river.jpg"
+          poster={poster_img}
         >
-          <source src="/public/assets/images/river.mp4" type="video/mp4" />
+          <source src={poster_mov} type="video/mp4" />
         </video>
-
-        <video
-          className="video-container video-container-overlay"
-          autoPlay=""
-          loop=""
-          muted=""
-          data-reactid=".0.1.0.0"
-        >
-          <source
-            type="video/mp4"
-            data-reactid=".0.1.0.0.0"
-            src="mov_bbb.mp4"
-          />
-        </video>
+        <h1>THIS IS A RIVER</h1>
+        <h2>How majestic</h2>
       </div>
     </div>
   );

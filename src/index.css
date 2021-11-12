@@ -14,8 +14,8 @@ code {
 
 /* video background */
 #background-video {
-  height: 80%;
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   object-fit: cover;
   position: fixed;
   left: 0;
@@ -26,19 +26,19 @@ code {
 }
 
 /* page content */
-.banner-header h1,
+.animated-title h1,
 h2 {
   color: white;
   font-weight: bold;
   text-align: center;
 }
 
-.banner-header h1 {
+.animated-title h1 {
   font-size: 4rem;
   margin-top: 10%;
 }
 
-.banner-header h2 {
+.animated-title h2 {
   font-size: 3rem;
 }
 
@@ -50,12 +50,12 @@ h2 {
     background: url("./assets/images/river.jpg") no-repeat;
     background-size: cover;
   }
-  .banner-header h1 {
+  .animated-title h1 {
     font-size: 3rem;
     margin-top: 10vh;
   }
 
-  .banner-header h2 {
+  .animated-title h2 {
     font-size: 2rem;
   }
 }
@@ -63,4 +63,45 @@ h2 {
 .nav-link {
   color: white;
   font-weight: bold;
+}
+
+.site-body {
+  background: white;
+  position: relative;
+  padding: 4rem 1rem;
+  margin-top: 30vh;
+  border-radius: 60px 60px 0 0;
+}
+
+.carousel-products {
+  margin-top: 10vh;
+}
+
+.carousel-products h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-site {
+  background: #efeeea;
+  position: relative;
+  padding: 4rem 1rem;
+}
+
+.footerItem {
+  margin-bottom: 0.625 rem;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.footerItem a {
+  color: #212529;
+}
+
+.footerItemColumn ul {
+  list-style: none;
+}
+
+.footer-site .footer-divider {
+  margin: 50px;
 }

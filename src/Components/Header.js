@@ -25,7 +25,7 @@ export default function Header() {
   };
 
   return (
-    <div>
+    <>
       <Navbar collapseOnSelect expand="sm" bg="ligth" variant="ligth">
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -109,9 +109,11 @@ export default function Header() {
         >
           <source src={poster_mov} type="video/mp4" />
         </video>
-        <h1>THIS IS A RIVER</h1>
-        <h2>How majestic</h2>
+        <div className="animated-title">
+          <h1>THIS IS A RIVER</h1>
+          <h2>How majestic</h2>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

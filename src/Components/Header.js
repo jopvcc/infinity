@@ -8,20 +8,41 @@ import {
   ListItemIcon,
   IconButton,
   Tooltip,
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Slide,
 } from "@mui/material";
 import { Logout } from "@mui/icons-material";
 
 import poster_img from "../assets/images/river.jpg";
 import poster_mov from "../assets/images/river.mp4";
 
+const Transition = React.forwardRef(function Transition(props, ref) {
+  return <Slide direction="up" ref={ref} {...props} />;
+});
+
 export default function Header() {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
+  const open1 = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
   const handleClose = () => {
     setAnchorEl(null);
+  };
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleCloseDialog = () => {
+    setOpen(false);
   };
 
   return (
@@ -53,7 +74,7 @@ export default function Header() {
               </Box>
               <Menu
                 anchorEl={anchorEl}
-                open={open}
+                open={open1}
                 onClose={handleClose}
                 onClick={handleClose}
                 PaperProps={{
@@ -88,6 +109,9 @@ export default function Header() {
                 <MenuItem>
                   <Avatar /> Perfil
                 </MenuItem>
+                <Button variant="outlined" onClick={handleClickOpen}>
+                  Slide in alert dialog
+                </Button>
                 <MenuItem>
                   <ListItemIcon>
                     <Logout fontSize="small" />
@@ -114,6 +138,25 @@ export default function Header() {
           <h2>How majestic</h2>
         </div>
       </div>
+      <Dialog
+        open={open}
+        TransitionComponent={Transition}
+        keepMounted
+        onClose={handleCloseDialog}
+        aria-describedby="alert-dialog-slide-description"
+      >
+        <DialogTitle>{"Use Google's location service?"}</DialogTitle>
+        <DialogContent>
+          <DialogContentText id="alert-dialog-slide-description">
+            Let Google help apps determine location. This means sending
+            anonymous location data to Google, even when no apps are running.
+          </DialogContentText>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose}>Disagree</Button>
+          <Button onClick={handleClose}>Agree</Button>
+        </DialogActions>
+      </Dialog>
     </>
   );
 }

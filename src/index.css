@@ -105,3 +105,18 @@ h2 {
 .footer-site .footer-divider {
   margin: 50px;
 }
+
+#dialog-login-title {
+  color: #212529 !important;
+}
+
+#dialog-login-button {
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.dialog-actions-button {
+  margin: auto;
+  display: block;
+}

@@ -22,6 +22,9 @@ import {
 import { Logout } from "@mui/icons-material";
 import { useTheme } from "@mui/material/styles";
 
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Marketplace from "../Pages/Marketplace";
+
 import poster_img from "../assets/images/river.jpg";
 import poster_mov from "../assets/images/river.mp4";
 
@@ -57,11 +60,19 @@ export default function Header() {
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#features">Features</Nav.Link>
-              <Nav.Link href="#pricing">Pricing</Nav.Link>
-            </Nav>
+            <Router>
+              <Nav className="me-auto">
+                <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/marketplace">Marketplace</Nav.Link>
+                <Link to="/marketplace">Marketplace</Link>
+                <Nav.Link href="#">Pricing</Nav.Link>
+              </Nav>
+              <Switch>
+                <Route path="/marketplace">
+                  <Marketplace />
+                </Route>
+              </Switch>
+            </Router>
           </Navbar.Collapse>
           <Navbar.Collapse className="justify-content-end">
             <React.Fragment>

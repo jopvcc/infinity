@@ -14,6 +14,11 @@ import {
 
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 
+import product_1 from "../assets/images/product_1.jpg";
+import product_2 from "../assets/images/product_2.jpg";
+import product_3 from "../assets/images/product_3.jpg";
+import product_4 from "../assets/images/product_4.jpg";
+
 export default function CarouselProducts() {
   const responsive = {
     desktop: {
@@ -47,7 +52,7 @@ export default function CarouselProducts() {
         autoPlaySpeed={1000}
         keyBoardControl={true}
         customTransition="all .5"
-        transitionDuration={500}
+        transitionDuration={3000}
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         //deviceType={this.props.deviceType}
@@ -60,7 +65,7 @@ export default function CarouselProducts() {
               component="img"
               alt="river"
               height="140"
-              image="/river.jpg"
+              image={product_1}
             />
             <CardContent>
               <Grid container alignItems="center">
@@ -93,7 +98,7 @@ export default function CarouselProducts() {
               component="img"
               alt="river"
               height="140"
-              image="/river.jpg"
+              image={product_2}
             />
             <CardContent>
               <Grid container alignItems="center">
@@ -126,7 +131,7 @@ export default function CarouselProducts() {
               component="img"
               alt="river"
               height="140"
-              image="/river.jpg"
+              image={product_3}
             />
             <CardContent>
               <Grid container alignItems="center">
@@ -159,7 +164,7 @@ export default function CarouselProducts() {
               component="img"
               alt="river"
               height="140"
-              image="/river.jpg"
+              image={product_4}
             />
             <CardContent>
               <Grid container alignItems="center">

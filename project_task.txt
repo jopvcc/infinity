@@ -1,0 +1,23 @@
+.:: LISTA DE TAREAS DEL PROYECTO INFINITY ::.
+
+Fecha de Inicio: 8 de noviembre de 2021
+
+__ NOVIEMBRE __
+
+< Semana pre-inicial >
+- Estudio de la tecnologia.
+- Seleccion e instalacion de los entornos de desarrollo.
+
+< Semana 8 .. 12 >
+- Crear proyecto y sus dependencias.
+- Disenar y crear template de la pagina principal.
+
+< Semana 15 .. 19 >
+- Trabajar en el template de la pagina principal.
+- Login.
+- Disenar marketplace.
+
+< Semana 22 .. 26 >
+- Disenar nuevo marketplace.
+- Trabajar en el marketplace.
+- Disenar y crear perfil de usuario.

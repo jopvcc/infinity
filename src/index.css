@@ -1,13 +1,122 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* video background */
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+/* page content */
+.animated-title h1,
+h2 {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.animated-title h1 {
+  font-size: 4rem;
+  margin-top: 10%;
+}
+
+.animated-title h2 {
+  font-size: 3rem;
+}
+
+@media (max-width: 750px) {
+  #background-video {
+    display: none;
+  }
+  body {
+    background: url("./assets/images/river.jpg") no-repeat;
+    background-size: cover;
+  }
+  .animated-title h1 {
+    font-size: 3rem;
+    margin-top: 10vh;
+  }
+
+  .animated-title h2 {
+    font-size: 2rem;
+  }
+}
+
+.nav-link {
+  color: white;
+  font-weight: bold;
+}
+
+.site-body {
+  background: white;
+  position: relative;
+  padding: 4rem 1rem;
+  margin-top: 30vh;
+  border-radius: 60px 60px 0 0;
+}
+
+.carousel-products {
+  margin-top: 10vh;
+}
+
+.carousel-products h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.footer-site {
+  background: #efeeea;
+  position: relative;
+  padding: 4rem 1rem;
+}
+
+.footerItem {
+  margin-bottom: 0.625 rem;
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.footerItem a {
+  color: #212529;
+}
+
+.footerItemColumn ul {
+  list-style: none;
+}
+
+.footer-site .footer-divider {
+  margin: 50px;
+}
+
+#dialog-login-title {
+  color: #212529 !important;
+}
+
+#dialog-login-button {
+  width: 80%;
+  margin: auto;
+  display: block;
+}
+
+.dialog-actions-button {
+  margin: auto;
+  display: block;
 }
